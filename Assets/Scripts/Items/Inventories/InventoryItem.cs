@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DapperDino.Items.Inventories
 {
-    public abstract class InventoryItem : HotbarItem
+    public abstract class InventoryItem : Item
     {
         [Header("Item Data")]
         [SerializeField] private Rarity rarity = null;
@@ -14,7 +14,7 @@ namespace DapperDino.Items.Inventories
         {
             get
             {
-                string hexColour = ColorUtility.ToHtmlStringRGB(rarity.TextColour);
+                string hexColour = ColorUtility.ToHtmlStringRGB(rarity.Colour);
                 return $"<color=#{hexColour}>{Name}</color>";
             }
         }

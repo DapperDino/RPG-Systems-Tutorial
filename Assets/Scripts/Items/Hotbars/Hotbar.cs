@@ -6,7 +6,7 @@ namespace DapperDino.Items.Hotbars
     {
         [SerializeField] private HotbarSlot[] hotbarSlots = new HotbarSlot[10];
 
-        public void Add(HotbarItem itemToAdd)
+        public void Add(Item itemToAdd)
         {
             foreach (HotbarSlot hotbarSlot in hotbarSlots)
             {

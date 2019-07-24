@@ -11,7 +11,7 @@ namespace DapperDino.Items
 
         public int SlotIndex { get; private set; }
 
-        public abstract HotbarItem SlotItem { get; set; }
+        public abstract Item SlotItem { get; set; }
 
         private void OnEnable() => UpdateSlotUI();
 

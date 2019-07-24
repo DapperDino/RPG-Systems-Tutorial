@@ -4,5 +4,5 @@ using UnityEngine.Events;
 
 namespace DapperDino.Events.UnityEvents
 {
-    [Serializable] public class UnityHotbarItemEvent : UnityEvent<HotbarItem> { }
+    [Serializable] public class UnityItemEvent : UnityEvent<Item> { }
 }

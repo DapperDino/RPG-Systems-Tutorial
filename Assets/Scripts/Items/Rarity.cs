@@ -6,9 +6,9 @@ namespace DapperDino.Items
     public class Rarity : ScriptableObject
     {
         [SerializeField] private new string name = "New Rarity Name";
-        [SerializeField] private Color textColour = new Color(1f, 1f, 1f, 1f);
+        [SerializeField] private Color colour = new Color(1f, 1f, 1f, 1f);
 
         public string Name => name;
-        public Color TextColour => textColour;
+        public Color Colour => colour;
     }
 }

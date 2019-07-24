@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b163f6f1e4db44142b65c4bd0d6ee2b4, type: 3}
+  m_Name: Element_Earth
+  m_EditorClassIdentifier: 
+  name: Earth
+  colour: {r: 0.7075472, g: 0.32254377, b: 0.09678713, a: 1}

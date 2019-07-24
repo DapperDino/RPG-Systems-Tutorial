@@ -1,11 +1,12 @@
-﻿using DapperDino.Items.Inventories;
+﻿using DapperDino.Items.Hotbars;
+using DapperDino.Items.Inventories;
 using System.Text;
 using UnityEngine;
 
 namespace DapperDino.Items
 {
     [CreateAssetMenu(fileName = "New Consumable Item", menuName = "Items/Consumable Item")]
-    public class ConsumableItem : InventoryItem
+    public class ConsumableItem : InventoryItem, IHotbarItem
     {
         [Header("Consumable Data")]
         [SerializeField] private string useText = "Does something, maybe?";
@@ -20,6 +21,11 @@ namespace DapperDino.Items
             builder.Append("Sell Price: ").Append(SellPrice).Append(" Gold");
 
             return builder.ToString();
+        }
+
+        public void Use()
+        {
+            Debug.Log($"Drinking {Name}");
         }
     }
 }

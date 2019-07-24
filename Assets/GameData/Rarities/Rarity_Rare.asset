@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d275505cc55ab24bad335abb327e635, type: 3}
-  m_Name: Rarity_Epic
+  m_Name: Rarity_Rare
   m_EditorClassIdentifier: 
-  name: Epic
-  textColour: {r: 0.7784606, g: 0.07863116, b: 0.8773585, a: 1}
+  name: Rare
+  colour: {r: 0.033018887, g: 0.46455607, b: 1, a: 1}

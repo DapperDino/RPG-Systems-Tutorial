@@ -10,7 +10,7 @@ namespace DapperDino.Items.Inventories
         [SerializeField] private Inventory inventory = null;
         [SerializeField] private TextMeshProUGUI itemQuantityText = null;
 
-        public override HotbarItem SlotItem
+        public override Item SlotItem
         {
             get { return ItemSlot.item; }
             set { }

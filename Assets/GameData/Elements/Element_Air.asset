@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d275505cc55ab24bad335abb327e635, type: 3}
-  m_Name: Rarity_Uncommon
+  m_Script: {fileID: 11500000, guid: b163f6f1e4db44142b65c4bd0d6ee2b4, type: 3}
+  m_Name: Element_Air
   m_EditorClassIdentifier: 
-  name: Uncommon
-  textColour: {r: 0.2934443, g: 0.8207547, b: 0.18970275, a: 1}
+  name: Air
+  colour: {r: 0.4625756, g: 0.98523164, b: 0.990566, a: 1}

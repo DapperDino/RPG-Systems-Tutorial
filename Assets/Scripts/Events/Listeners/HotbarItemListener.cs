@@ -4,5 +4,5 @@ using DapperDino.Items.Hotbars;
 
 namespace DapperDino.Events.Listeners
 {
-    public class HotbarItemListener : BaseGameEventListener<HotbarItem, HotbarItemEvent, UnityHotbarItemEvent> { }
+    public class ItemListener : BaseGameEventListener<Item, ItemEvent, UnityItemEvent> { }
 }

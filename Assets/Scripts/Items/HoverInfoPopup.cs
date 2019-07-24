@@ -48,7 +48,7 @@ namespace Hel.Items
             popupObject.transform.position = newPos;
         }
 
-        public void DisplayInfo(HotbarItem infoItem)
+        public void DisplayInfo(Item infoItem)
         {
             StringBuilder builder = new StringBuilder();
 
