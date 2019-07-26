@@ -1,7 +1,9 @@
-﻿namespace DapperDino.Interactables
+﻿using UnityEngine;
+
+namespace DapperDino.Interactables
 {
     public interface IInteractable
     {
-        void Interact();
+        void Interact(GameObject other);
     }
 }

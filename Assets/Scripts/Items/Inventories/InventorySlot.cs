@@ -16,7 +16,7 @@ namespace DapperDino.Items.Inventories
             set { }
         }
 
-        public ItemSlot ItemSlot => inventory.ItemContainer.GetSlotByIndex(SlotIndex);
+        public ItemSlot ItemSlot => inventory.GetSlotByIndex(SlotIndex);
 
         public override void OnDrop(PointerEventData eventData)
         {
@@ -26,7 +26,7 @@ namespace DapperDino.Items.Inventories
 
             if ((itemDragHandler.ItemSlotUI as InventorySlot) != null)
             {
-                inventory.ItemContainer.Swap(itemDragHandler.ItemSlotUI.SlotIndex, SlotIndex);
+                inventory.Swap(itemDragHandler.ItemSlotUI.SlotIndex, SlotIndex);
             }
         }
 
