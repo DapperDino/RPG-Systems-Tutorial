@@ -1,5 +1,4 @@
 using DapperDino.Interactables;
-using DapperDino.Items.Hotbars;
 using UnityEngine;
 
 namespace DapperDino.Items

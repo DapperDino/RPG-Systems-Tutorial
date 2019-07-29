@@ -3,6 +3,6 @@ using UnityEngine;
 
 namespace DapperDino.Events.CustomEvents
 {
-    [CreateAssetMenu(fileName = "New Hotbar Item Event", menuName = "Game Events/Hotbar Item Event")]
+    [CreateAssetMenu(fileName = "New Item Event", menuName = "Game Events/Item Event")]
     public class ItemEvent : BaseGameEvent<Item> { }
 }

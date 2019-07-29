@@ -241,6 +241,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &347782824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 347782824, guid: 9529a49883e8b4448af6e1852b01ed4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5416585338477476432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97cd3674d0423e744a50f1700c79d638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &408338266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2638,106 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2582318170016337767, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827526783221462, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827526876693317, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527145470937, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527211795246, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527363336022, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527377754555, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527413685859, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527519008118, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527641078705, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527751757133, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827527894152843, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528165330601, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528347495678, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528368336633, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528421284994, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528523076015, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528545801278, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528542944804, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1423827528810205566, guid: 6c2611bf95bfbea4782d11a15d050cc5,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2611bf95bfbea4782d11a15d050cc5, type: 3}
 --- !u!1001 &1673393895776917061
@@ -3000,6 +3112,56 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1816665409125501530, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665409392454901, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665409440919817, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665409493221133, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665410258042485, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665410527422305, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665410592806910, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665410795106591, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 1816665411174829812, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
+    - target: {fileID: 4413255745212778523, guid: cfd6bf43a93f94948876a0df0c786559,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 347782824}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfd6bf43a93f94948876a0df0c786559, type: 3}
 --- !u!224 &1709528100528125821 stripped

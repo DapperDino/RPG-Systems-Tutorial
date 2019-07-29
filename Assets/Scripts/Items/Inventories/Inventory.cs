@@ -1,18 +1,18 @@
-﻿using DapperDino.Events.CustomEvents;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace DapperDino.Items.Inventories
 {
-    [CreateAssetMenu(fileName = "New Inventory", menuName = "Items/Inventory")]
-    public class Inventory : ScriptableObject, IItemContainer
+    public class Inventory : MonoBehaviour, IItemContainer
     {
-        [SerializeField] private VoidEvent onInventoryItemsUpdated = null;
+        [SerializeField] private int size = 20;
+        [SerializeField] private UnityEvent onInventoryItemsUpdated = null;
 
         public ItemSlot GetSlotByIndex(int index) => itemSlots[index];
 
         private ItemSlot[] itemSlots = new ItemSlot[0];
 
-        public void SetSize(int size)
+        public void Start()
         {
             itemSlots = new ItemSlot[size];
         }
@@ -33,7 +33,7 @@ namespace DapperDino.Items.Inventories
 
                             itemSlot.quantity = 0;
 
-                            onInventoryItemsUpdated.Raise();
+                            onInventoryItemsUpdated.Invoke();
 
                             return itemSlot;
                         }
@@ -57,7 +57,7 @@ namespace DapperDino.Items.Inventories
 
                         itemSlot.quantity = 0;
 
-                        onInventoryItemsUpdated.Raise();
+                        onInventoryItemsUpdated.Invoke();
 
                         return itemSlot;
                     }
@@ -70,7 +70,7 @@ namespace DapperDino.Items.Inventories
                 }
             }
 
-            onInventoryItemsUpdated.Raise();
+            onInventoryItemsUpdated.Invoke();
 
             return itemSlot;
         }
@@ -97,7 +97,7 @@ namespace DapperDino.Items.Inventories
                             {
                                 itemSlots[i] = new ItemSlot();
 
-                                onInventoryItemsUpdated.Raise();
+                                onInventoryItemsUpdated.Invoke();
 
                                 return;
                             }
@@ -113,7 +113,7 @@ namespace DapperDino.Items.Inventories
 
             itemSlots[slotIndex] = new ItemSlot();
 
-            onInventoryItemsUpdated.Raise();
+            onInventoryItemsUpdated.Invoke();
         }
 
         public void Swap(int indexOne, int indexTwo)
@@ -121,7 +121,7 @@ namespace DapperDino.Items.Inventories
             ItemSlot firstSlot = itemSlots[indexOne];
             ItemSlot secondSlot = itemSlots[indexTwo];
 
-            if (firstSlot == secondSlot) { return; }
+            if (firstSlot.Equals(secondSlot)) { return; }
 
             if (secondSlot.item != null)
             {
@@ -135,7 +135,7 @@ namespace DapperDino.Items.Inventories
 
                         itemSlots[indexOne] = new ItemSlot();
 
-                        onInventoryItemsUpdated.Raise();
+                        onInventoryItemsUpdated.Invoke();
 
                         return;
                     }
@@ -145,7 +145,7 @@ namespace DapperDino.Items.Inventories
             itemSlots[indexOne] = secondSlot;
             itemSlots[indexTwo] = firstSlot;
 
-            onInventoryItemsUpdated.Raise();
+            onInventoryItemsUpdated.Invoke();
         }
 
         public bool HasItem(InventoryItem item)
