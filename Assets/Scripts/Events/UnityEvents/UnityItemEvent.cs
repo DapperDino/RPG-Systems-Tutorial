@@ -1,5 +1,5 @@
-﻿using DapperDino.Items.Hotbars;
-using System;
+﻿using System;
+using DapperDino.Items;
 using UnityEngine.Events;
 
 namespace DapperDino.Events.UnityEvents

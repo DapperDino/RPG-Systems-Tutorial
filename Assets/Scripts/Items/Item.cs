@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DapperDino.Items.Hotbars
+namespace DapperDino.Items
 {
     public abstract class Item : ScriptableObject
     {

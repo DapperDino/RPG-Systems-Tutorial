@@ -1,21 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace DapperDino.Items.Inventories
 {
     public class Inventory : MonoBehaviour, IItemContainer
     {
-        [SerializeField] private int size = 20;
         [SerializeField] private UnityEvent onInventoryItemsUpdated = null;
+        [SerializeField] private ItemSlot[] itemSlots = new ItemSlot[0];
 
         public ItemSlot GetSlotByIndex(int index) => itemSlots[index];
-
-        private ItemSlot[] itemSlots = new ItemSlot[0];
-
-        public void Start()
-        {
-            itemSlots = new ItemSlot[size];
-        }
 
         public ItemSlot AddItem(ItemSlot itemSlot)
         {
@@ -105,6 +99,21 @@ namespace DapperDino.Items.Inventories
                     }
                 }
             }
+        }
+
+        public List<Item> GetAllItems()
+        {
+            List<Item> items = new List<Item>();
+
+            for (int i = 0; i < itemSlots.Length; i++)
+            {
+                if (itemSlots[i].item != null)
+                {
+                    items.Add(itemSlots[i].item);
+                }
+            }
+
+            return items;
         }
 
         public void RemoveAt(int slotIndex)
