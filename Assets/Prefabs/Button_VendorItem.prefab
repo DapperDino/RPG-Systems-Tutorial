@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 3276454798140441009}
   - component: {fileID: 3276454798140441023}
   - component: {fileID: 3276454798140441022}
+  - component: {fileID: 6534601679376896034}
   m_Layer: 5
   m_Name: Button_VendorItem
   m_TagString: Untagged
@@ -384,3 +385,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6534601679376896034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276454798140441008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a05c172e7ae249499ef74087fd3a518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNameText: {fileID: 988101553}
+  itemIconImage: {fileID: 1278935401}

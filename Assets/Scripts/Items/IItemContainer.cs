@@ -7,7 +7,7 @@ namespace DapperDino.Items
     {
         ItemSlot GetSlotByIndex(int index);
         ItemSlot AddItem(ItemSlot itemSlot);
-        List<Item> GetAllItems();
+        List<InventoryItem> GetAllItems();
         void RemoveItem(ItemSlot itemSlot);
         void RemoveAt(int slotIndex);
         void Swap(int indexOne, int indexTwo);

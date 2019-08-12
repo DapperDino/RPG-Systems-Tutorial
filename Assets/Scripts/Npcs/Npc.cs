@@ -11,14 +11,18 @@ namespace DapperDino.Npcs
         [SerializeField] private new string name = "New Npc Name";
         [SerializeField] private string greetingText = "Hello adventurer!";
 
-        private IOccupation[] occupations = new IOccupation[0];
-
         public string Name => name;
         public string GreetingText => greetingText;
-        public IOccupation[] Occupations => occupations;
+        public GameObject OtherInteractor { get; private set; } = null;
+        public IOccupation[] Occupations { get; private set; } = new IOccupation[0];
 
-        private void Start() => occupations = GetComponents<IOccupation>();
+        private void Start() => Occupations = GetComponents<IOccupation>();
 
-        public void Interact(GameObject other) => onStartInteraction.Raise(this);
+        public void Interact(GameObject other)
+        {
+            OtherInteractor = other;
+
+            onStartInteraction.Raise(this);
+        }
     }
 }

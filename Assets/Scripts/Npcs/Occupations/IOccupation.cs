@@ -1,8 +1,10 @@
-﻿namespace DapperDino.Npcs.Occupations
+﻿using UnityEngine;
+
+namespace DapperDino.Npcs.Occupations
 {
     public interface IOccupation
     {
         string Name { get; }
-        void Trigger();
+        void Trigger(GameObject other);
     }
 }
