@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1b41e7e9ccdd344eaae014e0deb8fd3, type: 3}
-  m_Name: Item_Consumable_HealthPotion
+  m_Name: Item_Consumable_SpeedPotion
   m_EditorClassIdentifier: 
-  name: Health Potion
-  description: Healy boi
+  name: Speed Potion
+  description: Gotta go fast
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  rarity: {fileID: 11400000, guid: bd9a8eda009dbfb40984111ff5866cd8, type: 2}
-  sellPrice: 1
-  maxStack: 5
+  rarity: {fileID: 11400000, guid: 0b671ad502b4b754184dc8291f37253b, type: 2}
+  sellPrice: 5
+  maxStack: 3
   useText: Does something, maybe?

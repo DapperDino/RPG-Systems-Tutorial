@@ -6,8 +6,11 @@ namespace DapperDino.Items.Inventories
 {
     public class Inventory : MonoBehaviour, IItemContainer
     {
+        [SerializeField] private int money = 100;
         [SerializeField] private UnityEvent onInventoryItemsUpdated = null;
         [SerializeField] private ItemSlot[] itemSlots = new ItemSlot[0];
+
+        public int Money { get { return money; } set { money = value; } }
 
         public ItemSlot GetSlotByIndex(int index) => itemSlots[index];
 
@@ -101,16 +104,17 @@ namespace DapperDino.Items.Inventories
             }
         }
 
-        public List<InventoryItem> GetAllItems()
+        public List<InventoryItem> GetAllUniqueItems()
         {
             List<InventoryItem> items = new List<InventoryItem>();
 
             for (int i = 0; i < itemSlots.Length; i++)
             {
-                if (itemSlots[i].item != null)
-                {
-                    items.Add(itemSlots[i].item);
-                }
+                if (itemSlots[i].item == null) { continue; }
+
+                if (items.Contains(itemSlots[i].item)) { continue; }
+
+                items.Add(itemSlots[i].item);
             }
 
             return items;

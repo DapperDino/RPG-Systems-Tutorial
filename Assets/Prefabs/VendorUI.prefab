@@ -375,7 +375,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.667, y: 1}
+  m_AnchorMax: {x: 0.46, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1725,7 +1725,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1334064411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7035019289379450536}
+        m_MethodName: SetCurrentItemContainer
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1413594079
@@ -2079,12 +2090,23 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0.667
+  m_MaxValue: 50
+  m_WholeNumbers: 1
+  m_Value: 23
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7035019289379450536}
+        m_MethodName: UpdateSliderText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1594221935
@@ -2332,7 +2354,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1793197160}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7035019289379450536}
+        m_MethodName: SetCurrentItemContainer
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2016511467
@@ -2791,6 +2824,11 @@ MonoBehaviour:
   buttonPrefab: {fileID: 3276454798140441008, guid: e39ad177f16405643b047cb3c6a006ea,
     type: 3}
   buttonHolderTransform: {fileID: 62102033}
+  itemNameText: {fileID: 444064353}
+  itemDescriptionText: {fileID: 1061190797}
+  itemDataText: {fileID: 458014613}
+  quantityText: {fileID: 362579485}
+  quantitySlider: {fileID: 1548271792}
 --- !u!114 &5780319821444234770
 MonoBehaviour:
   m_ObjectHideFlags: 0
