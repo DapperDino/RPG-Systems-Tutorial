@@ -10,6 +10,7 @@ namespace DapperDino.Npcs.Occupations.Vendors
     {
         [SerializeField] private GameObject buttonPrefab = null;
         [SerializeField] private Transform buttonHolderTransform = null;
+        [SerializeField] private GameObject selectedItemDataHolder = null;
 
         [Header("Data Display")]
         [SerializeField] private TextMeshProUGUI itemNameText = null;
@@ -28,7 +29,10 @@ namespace DapperDino.Npcs.Occupations.Vendors
             this.scenarioData = scenarioData;
 
             SetCurrentItemContainer(true);
+
+            SetItem(scenarioData.SellingItemContainer.GetSlotByIndex(0).item);
         }
+
         public void SetCurrentItemContainer(bool isFirst)
         {
             ClearItemButtons();
@@ -46,7 +50,7 @@ namespace DapperDino.Npcs.Occupations.Vendors
                     scenarioData.SellingItemContainer.GetTotalQuantity(items[i]));
             }
 
-            SetItem(scenarioData.SellingItemContainer.GetSlotByIndex(0).item);
+            selectedItemDataHolder.SetActive(false);
         }
 
         public void SetItem(InventoryItem item)
@@ -69,6 +73,8 @@ namespace DapperDino.Npcs.Occupations.Vendors
             quantityText.text = $"0/{totalQuantity}";
             quantitySlider.maxValue = totalQuantity;
             quantitySlider.value = 0;
+
+            selectedItemDataHolder.SetActive(true);
         }
 
         public void UpdateSliderText(float quantity)
@@ -81,14 +87,23 @@ namespace DapperDino.Npcs.Occupations.Vendors
         {
             int price = currentItem.SellPrice * (int)quantitySlider.value;
 
+            if (scenarioData.BuyingItemContainer.Money < price) { return; }
+
             scenarioData.BuyingItemContainer.Money -= price;
             scenarioData.SellingItemContainer.Money += price;
 
             var itemSlotSawp = new ItemSlot(currentItem, (int)quantitySlider.value);
 
-            scenarioData.BuyingItemContainer.AddItem(itemSlotSawp);
+            bool soldAll = (int)quantitySlider.value == scenarioData.SellingItemContainer.GetTotalQuantity(currentItem);
 
+            if (soldAll) { selectedItemDataHolder.SetActive(false); }
+
+            scenarioData.BuyingItemContainer.AddItem(itemSlotSawp);
             scenarioData.SellingItemContainer.RemoveItem(itemSlotSawp);
+
+            SetCurrentItemContainer(scenarioData.IsFirstContainerBuying);
+
+            if (!soldAll) { SetItem(currentItem); }
         }
 
         private void ClearItemButtons()
